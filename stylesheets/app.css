@@ -9466,11 +9466,12 @@ header #menu-principal ul {
 header #menu-principal ul li {
   display: inline-block;
   margin: 0 10px;
-  padding: 15px 10px 17px 10px;
+  padding: 15px 10px 20px 10px;
   border-bottom: 3px solid #007dc6;
   font-weight: bold;
+  font-size: 14px;
 }
-/* line 70, ../scss/app.scss */
+/* line 71, ../scss/app.scss */
 header #menu-principal ul li:hover {
   padding-bottom: 13px;
   border-bottom: 4px solid #ffc220;
@@ -9478,11 +9479,146 @@ header #menu-principal ul li:hover {
 }
 
 /* line 81, ../scss/app.scss */
+#main {
+  padding-top: 30px;
+  min-height: 700px;
+}
+/* line 86, ../scss/app.scss */
+#main .titulo-pagina h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #004066;
+  line-height: 50px;
+}
+/* line 93, ../scss/app.scss */
+#main .titulo-pagina button {
+  margin-bottom: 0px;
+}
+/* line 97, ../scss/app.scss */
+#main .titulo-pagina .columns {
+  margin-bottom: 15px;
+}
+/* line 101, ../scss/app.scss */
+#main .titulo-pagina .fa {
+  font-weight: 100;
+  border: 1px solid;
+  padding: 7px;
+  border-radius: 50%;
+}
+/* line 109, ../scss/app.scss */
+#main #lista-produtos {
+  border-spacing: 0;
+  width: 100%;
+  border: none;
+}
+/* line 113, ../scss/app.scss */
+#main #lista-produtos thead {
+  border-color: #007eca;
+}
+/* line 115, ../scss/app.scss */
+#main #lista-produtos thead tr {
+  background: #007eca;
+}
+/* line 118, ../scss/app.scss */
+#main #lista-produtos thead tr th {
+  color: #FFF;
+}
+/* line 127, ../scss/app.scss */
+#main #lista-produtos tbody tr td {
+  border-bottom: 1px solid #ececec;
+}
+/* line 131, ../scss/app.scss */
+#main #lista-produtos tbody tr td p {
+  font-size: 11px;
+  margin-top: 10px;
+}
+/* line 136, ../scss/app.scss */
+#main #lista-produtos tbody tr td img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 142, ../scss/app.scss */
+#main #lista-produtos tbody tr .td-descricao {
+  border-right: 1px solid #ececec;
+}
+/* line 144, ../scss/app.scss */
+#main #lista-produtos tbody tr .td-descricao strong {
+  margin-top: 20px;
+  display: block;
+}
+/* line 149, ../scss/app.scss */
+#main #lista-produtos tbody tr .td-descricao a {
+  display: block;
+  text-align: center;
+  color: rgba(239, 40, 40, 0.4);
+}
+/* line 153, ../scss/app.scss */
+#main #lista-produtos tbody tr .td-descricao a:hover {
+  color: rgba(239, 40, 40, 0.7);
+}
+/* line 159, ../scss/app.scss */
+#main #lista-produtos tbody tr .td-qtd {
+  padding: 0 20px;
+  border-right: 1px solid #ececec;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 159, ../scss/app.scss */
+  #main #lista-produtos tbody tr .td-qtd {
+    width: 160px;
+  }
+}
+/* line 171, ../scss/app.scss */
+#main #lista-produtos tbody tr .td-preco span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #0077BF;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 169, ../scss/app.scss */
+  #main #lista-produtos tbody tr .td-preco {
+    width: 200px;
+  }
+}
+/* line 186, ../scss/app.scss */
+#main #lista-produtos tbody .tr-soma {
+  background: none;
+}
+/* line 188, ../scss/app.scss */
+#main #lista-produtos tbody .tr-soma td {
+  padding: 20px 10px;
+}
+/* line 192, ../scss/app.scss */
+#main #lista-produtos tbody .tr-soma .total {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0077BF;
+  font-style: italic;
+  border-left: 1px solid #ececec;
+}
+/* line 204, ../scss/app.scss */
+#main #btn-finalizar {
+  background: #ef6b28;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* line 215, ../scss/app.scss */
+footer {
+  background: #004d7b;
+  color: #FFF;
+  padding-top: 10px;
+  height: 40px;
+  margin-top: 50px;
+}
+
+/* line 224, ../scss/app.scss */
 .no-padding {
   padding: 0 !important;
 }
 
-/* line 85, ../scss/app.scss */
+/* line 228, ../scss/app.scss */
 .no-margin {
   max-width: 100% !important;
   margin: 0 !important;

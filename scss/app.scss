@@ -63,9 +63,10 @@ header{
 			li{
 				display: inline-block;
 				margin: 0 10px;
-				padding: 15px 10px 17px 10px;
+				padding: 15px 10px 20px 10px;
 				border-bottom: 3px solid #007dc6;
 				font-weight: bold;
+				font-size: 14px;
 
 				&:hover{
 					padding-bottom: 13px;
@@ -75,7 +76,149 @@ header{
 			}
 		}
 	}
-}	
+}
+
+#main{
+	padding-top: 30px;
+	min-height: 700px;
+	
+	.titulo-pagina{
+		h3{
+			margin: 0;
+			font-size: 20px;
+			color: #004066;
+			line-height: 50px;
+		}
+
+		button{
+			margin-bottom: 0px;
+		}
+
+		.columns{
+			margin-bottom: 15px;
+		}
+
+		.fa{
+			font-weight: 100;
+			border: 1px solid;
+			padding: 7px;
+			border-radius: 50%;
+		}
+	}
+
+	#lista-produtos{
+		border-spacing: 0;
+		width: 100%;
+		border: none;
+		thead{
+			border-color: #007eca;
+			tr{
+				background: #007eca;
+				
+				th{
+					color: #FFF;
+				}
+			}
+		}
+
+		tbody{
+			
+			tr{
+				td{
+					border-bottom: 1px solid #ececec;
+					
+
+					p{
+						font-size: 11px;
+						margin-top: 10px;
+					}
+
+					img{
+						display: block;
+						margin: 0 auto;
+					}
+				}
+
+				.td-descricao{
+					border-right: 1px solid #ececec;
+					strong{
+						margin-top: 20px;
+						display: block;
+					}
+
+					a{
+						display: block;
+						text-align: center;
+						color: rgba(239, 40, 40, 0.40);
+						&:hover{
+							color: rgba(239, 40, 40, 0.70);
+						}
+					}
+				}
+
+				.td-qtd{
+					padding: 0 20px;
+					border-right: 1px solid #ececec;
+
+					@media #{$medium-up}{
+						width: 160px;
+					}
+
+				}
+
+				.td-preco{
+
+					span{
+						font-size: 15px;
+						font-weight: bold;
+						color: #0077BF;
+					}
+
+					@media #{$medium-up}{
+						width: 200px;
+					}
+				}
+
+				
+				
+			}
+
+			.tr-soma{
+				background: none;
+				td{
+					padding: 20px 10px;
+				}
+
+				.total{
+					font-size: 22px;
+					font-weight: bold;
+					color: #0077BF;
+					font-style: italic;
+					border-left: 1px solid #ececec;
+				}
+			}
+
+		}
+	}
+
+	#btn-finalizar{
+		background: #ef6b28;
+		padding: 10px 20px;
+		border-radius: 5px;
+		font-weight: bold;
+		font-size: 14px;
+
+	}
+}
+
+
+footer{
+	background: #004d7b;
+	color: #FFF;
+	padding-top: 10px;
+	height: 40px;
+	margin-top: 50px;
+}
 
 //* Funções de estruturação *//
 .no-padding {

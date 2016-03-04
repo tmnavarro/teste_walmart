@@ -1,16 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app>
+<html class="no-js" lang="pt-br" ng-app="walmartApp">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Finalizar Compra</title>
+	<title>Walmart Teste</title>
 	<link rel="stylesheet" href="stylesheets/app.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/modernizr/modernizr.js"></script>
 
-	<script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </head>
 
 
@@ -35,7 +34,66 @@
 	</header>
 
 	<section id="main">
+		
+		<div ng-controller="ProdutosController as produtosLoja">
+			<div class="row titulo-pagina">
+				<div class="small-6 columns">
+					<h3><i class="fa fa-shopping-basket"></i> Carrinho - <small>Verifique seu pedido</small></h3>
+				</div>
+				<div class="small-6 columns text-right">
+					<button id="btn-finalizar">Finalizar Compra</button>
+				</div>
 
+			</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<table id="lista-produtos">
+						<thead>
+							<tr>
+								<th>PRODUTO</th>
+								<th width="100px">QUANTIDADE</th>
+								<th class="text-center">PREÇO</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="produto in produtosLoja.produtos"  ng-if="produto.ativo !== 0" ng-show="produto.ativo !== 0">
+								<td class="td-descricao">
+									<div class="row">
+										<div class="small-12 medium-3 columns">
+											<img ng-src="{{ produto.img }}" alt="Celular Galaxy Win Duos">
+											<a ng-click="produtosLoja.removerProduto(produto.id); produto.ativo = 0"> <i class="fa fa-close"></i> Excluir Produto</a>
+										</div>
+										<div class="small-12 medium-9 columns">
+											<strong>{{ produto.nome }}</strong>
+											<p>{{ produto.descricao }}</p>
+											
+
+										</div>
+									</div>
+								</td>
+								<td class="td-qtd text-center">
+									<span>{{ produto.qtd }}</span>
+								</td>
+								<td  class="td-preco text-center">
+									<span>R{{ produto.preco * produto.qtd | currency }}</span>
+								</td>
+							</tr>
+
+							<tr class="tr-soma">
+								<td colspan="2" class="text-right"><strong>TOTAL</strong></td>
+								<td class="total text-center">R{{ produtosLoja.total | currency }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 columns text-right">
+					<button id="btn-finalizar">Finalizar Compra</button>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<footer>
@@ -46,10 +104,6 @@
 		</div>
 	</footer>
 
-
-	<script src="bower_components/foundation/js/foundation.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/app.js"></script>
 </body>
 
 </html>
