@@ -9,6 +9,9 @@
 	<script src="bower_components/modernizr/modernizr.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="bower_components/foundation/js/vendor/jquery.js"></script>
+	<script src="bower_components/foundation/js/foundation.min.js"></script>
+	<script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </head>
 
@@ -35,7 +38,7 @@
 
 	<section id="main">
 		
-		<div ng-controller="">
+		<div >
 			<div class="row titulo-pagina">
 				<div class="small-6 columns">
 					<h3><i class="fa fa-map-marker"></i> Meus endereços - <small>Lista de endereços de entrega</small></h3>
@@ -48,33 +51,90 @@
 						<h5>Endereço de cobrança</h5>
 
 						<p>Rua Calh. Angelo Presotto, 225 </br>	
-						<b>Bairro:</b>São José</br>	
-						<b>Cidade:</b> Franca - SP</br>	
-						<b>CEP:</b> 74401-289</br>	
-						Brasil</p>
+							<b>Bairro:</b>São José</br>	
+							<b>Cidade:</b> Franca - SP</br>	
+							<b>CEP:</b> 74401-289</br>	
+							Brasil</p>
 
-						<button><i class="fa fa-pencil"></i> Alterar Endereço</button>
+							<button class="edit-endereco" data-id="1"><i class="fa fa-pencil"></i> Alterar Endereço</button>
+						</div>
 					</div>
-				</div>
-				
-				<div class="small-12 medium-6 columns ">
-					<div class="endereco">
-						<h5>Endereço de cobrança</h5>
 
-						<p>Rua Calh. Angelo Presotto, 225 </br>	
-						<b>Bairro:</b>São José</br>	
-						<b>Cidade:</b> Franca - SP</br>	
-						<b>CEP:</b> 74401-289</br>	
-						Brasil</p>
-						
-						<button><i class="fa fa-pencil"></i> Alterar Endereço</button>
+					<div id="endereco-1" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+						<h2 id="modalTitle"><i class="fa fa-map-marker"></i> Editar endereço</h2>
+						<div class="row">
+							<div class="small-12 columns">
+								<label> Nome do endereço</label>
+								<input type="text">
+								<small>Exemplo: Minha Casa, Trabalho</small>
+							</div>
+
+							<div class="small-6 columns">
+								<label>CEP</label>
+								<input type="text">
+							</div>
+
+							<div class="small-12 columns">
+								<label>Endereço</label>
+								<input type="text">
+							</div>
+
+							<div class="small-2 columns">
+								<label>Numero</label>
+								<input type="text">
+							</div>
+
+							<div class="small-5 columns">
+								<label>Complemento</label>
+								<input type="text">
+							</div>
+
+							<div class="small-5 columns">
+								<label>Bairro</label>
+								<input type="text">
+							</div>
+
+							<div class="small-6 columns">
+								<label>Estado</label>
+								<input type="text">
+							</div>
+
+							<div class="small-6 columns">
+								<label>Cidade</label>
+								<input type="text">
+							</div>
+
+							<div class="small-12 columns">
+								<label>Ponto de referência</label>
+								<input type="text">
+							</div>
+
+							<div class="small-12 columns text-right">
+								<button> Salvar Alterações</button>
+							</div>
+
+						</div>
+						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 					</div>
-				</div>
+
+					<div class="small-12 medium-6 columns ">
+						<div class="endereco">
+							<h5>Endereço de cobrança</h5>
+
+							<p>Rua Calh. Angelo Presotto, 225 </br>	
+								<b>Bairro:</b>São José</br>	
+								<b>Cidade:</b> Franca - SP</br>	
+								<b>CEP:</b> 74401-289</br>	
+								Brasil</p>
+
+								<button><i class="fa fa-pencil"></i> Alterar Endereço</button>
+							</div>
+						</div>
 						
-				<div class="small-12 columns">
-					<button> <i class="fa fa-plus-circle"></i> Adicionar novo endereço</button>
-				</div>
-			</div>
+						<div class="small-12 columns">
+							<button> <i class="fa fa-plus-circle"></i> Adicionar novo endereço</button>
+						</div>
+					</div>
 
 
 				</section>
@@ -86,7 +146,17 @@
 						</div>
 					</div>
 				</footer>
+				<script>
+					$(document).foundation();
 
+					$(document).ready(function(){
+						$(document).on('click', ".edit-endereco", function(){
+							var id = $(this).attr('data-id');
+							$('#endereco-'+id).foundation('reveal','open');
+						});
+					});
+
+				</script>	
 			</body>
 
 			</html>

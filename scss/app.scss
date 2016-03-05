@@ -311,3 +311,24 @@ footer{
 	max-width: 100% !important;
 	margin: 0 !important;
 }
+
+.reveal-modal{
+	@media #{$medium-up}{
+		width: 35%;
+	}
+
+	padding: 0;
+
+	h2{
+		padding: 15px 20px;
+		background: #003859;
+		color: #FFF;
+		font-size: 18px;
+	}
+
+	small{
+		margin-top: -16px;
+		display: block;
+		margin-bottom: 16px; 
+	}
+}

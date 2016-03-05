@@ -9698,3 +9698,27 @@ footer {
   max-width: 100% !important;
   margin: 0 !important;
 }
+
+/* line 315, ../scss/app.scss */
+.reveal-modal {
+  padding: 0;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 315, ../scss/app.scss */
+  .reveal-modal {
+    width: 35%;
+  }
+}
+/* line 322, ../scss/app.scss */
+.reveal-modal h2 {
+  padding: 15px 20px;
+  background: #003859;
+  color: #FFF;
+  font-size: 18px;
+}
+/* line 329, ../scss/app.scss */
+.reveal-modal small {
+  margin-top: -16px;
+  display: block;
+  margin-bottom: 16px;
+}
