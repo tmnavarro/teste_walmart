@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="pt-br" ng-app="walmartApp">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Walmart Teste</title>
+	<link rel="stylesheet" href="stylesheets/app.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="bower_components/modernizr/modernizr.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<div class="row">
+			<div class="small-12 medium-4 columns">
+				<h1 id="logo"><img src="img/logo.png" alt="Logo Walmart"></h1>
+			</div>
+
+			<div class="small-12 medium-8 columns">
+				<nav id="menu-principal">
+					<ul>
+						<a href="index.html"><li>{{ "Finalizar Compra" | uppercase }}</li></a>
+						<a href="lista-endereco.html"><li>{{ "Lista de Endereços" | uppercase }}</li></a>
+						<a href="minha-conta.html"><li>{{ "Minha Conta" | uppercase }}</li></a>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		
+
+	</header>
+
+	<section id="main">
+		
+		<div ng-controller="">
+			<div class="row titulo-pagina">
+				<div class="small-6 columns">
+					<h3><i class="fa fa-user"></i> Minha conta - <small>Altere seus dados</small></h3>
+				</div>
+			</div>
+
+			<div class="row info-conta">
+				<div class="form">
+					<div class="small-12 columns">
+						<h5>Informações cadastrais</h5>
+					</div>
+
+					<div class="small-12 medium-6 columns">
+						<label for="nome">Nome</label>
+						<input type="text">
+					</div>
+
+					<div class="small-12 medium-6 columns">
+						<label for="nome">Email</label>
+						<input type="text">
+					</div>
+
+					<div class="small-12 medium-4 columns">
+						<label for="nome">Sexo</label>
+						<input type="radio" value="Masculino" name="sexo" id="masculino"><label for="masculino">Masculino</label>
+      					<input type="radio" value="Feminino" name="sexo" id="feminino"><label for="feminino">Feminino</label>
+					</div>
+
+					<div class="small-12 medium-4 columns">
+						<label for="nome">CPF</label>
+						<input type="text">
+					</div>
+
+					<div class="small-12 medium-4 columns">
+						<label for="nome">Data de Nasc.</label>
+						<input type="text">
+					</div>
+
+					<div class="small-12 medium-4 columns">
+						<label for="nome">Telefone</label>
+						<input type="text">
+					</div>
+
+
+					<div class="small-12 medium-4 columns">
+						<label for="nome">Celular</label>
+						<input type="text">
+					</div>
+
+					<div class="small-12 medium-4 columns ">
+						<button>Salvar alterações</button>
+					</div>
+					
+					
+					
+
+
+					
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+	</section>
+
+	<footer>
+		<div class="row">
+			<div class="small-12 columns text-center">
+				<small>Desenvolvido por Túlio Navarro - <i> <i class="fa fa-flask"></i> Front-End Walmart</i></small>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

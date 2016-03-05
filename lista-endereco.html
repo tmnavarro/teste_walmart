@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="pt-br" ng-app="walmartApp">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Walmart Teste</title>
+	<link rel="stylesheet" href="stylesheets/app.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="bower_components/modernizr/modernizr.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<div class="row">
+			<div class="small-12 medium-4 columns">
+				<h1 id="logo"><img src="img/logo.png" alt="Logo Walmart"></h1>
+			</div>
+
+			<div class="small-12 medium-8 columns">
+				<nav id="menu-principal">
+					<ul>
+						<a href="index.html"><li>{{ "Finalizar Compra" | uppercase }}</li></a>
+						<a href="lista-endereco.html"><li>{{ "Lista de Endereços" | uppercase }}</li></a>
+						<a href="minha-conta.html"><li>{{ "Minha Conta" | uppercase }}</li></a>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+	</header>
+
+	<section id="main">
+		
+		<div ng-controller="">
+			<div class="row titulo-pagina">
+				<div class="small-6 columns">
+					<h3><i class="fa fa-map-marker"></i> Meus endereços - <small>Lista de endereços de entrega</small></h3>
+				</div>
+			</div>
+
+			<div class="row meus-enderecos">
+				<div class="small-12 medium-6 columns ">
+					<div class="endereco">
+						<h5>Endereço de cobrança</h5>
+
+						<p>Rua Calh. Angelo Presotto, 225 </br>	
+						<b>Bairro:</b>São José</br>	
+						<b>Cidade:</b> Franca - SP</br>	
+						<b>CEP:</b> 74401-289</br>	
+						Brasil</p>
+
+						<button><i class="fa fa-pencil"></i> Alterar Endereço</button>
+					</div>
+				</div>
+				
+				<div class="small-12 medium-6 columns ">
+					<div class="endereco">
+						<h5>Endereço de cobrança</h5>
+
+						<p>Rua Calh. Angelo Presotto, 225 </br>	
+						<b>Bairro:</b>São José</br>	
+						<b>Cidade:</b> Franca - SP</br>	
+						<b>CEP:</b> 74401-289</br>	
+						Brasil</p>
+						
+						<button><i class="fa fa-pencil"></i> Alterar Endereço</button>
+					</div>
+				</div>
+						
+				<div class="small-12 columns">
+					<button> <i class="fa fa-plus-circle"></i> Adicionar novo endereço</button>
+				</div>
+			</div>
+
+
+				</section>
+
+				<footer>
+					<div class="row">
+						<div class="small-12 columns text-center">
+							<small>Desenvolvido por Túlio Navarro - <i> <i class="fa fa-flask"></i> Front-End Walmart</i></small>
+						</div>
+					</div>
+				</footer>
+
+			</body>
+
+			</html>

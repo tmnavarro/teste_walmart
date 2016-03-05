@@ -25,11 +25,6 @@
     };
 
 
-    this.finalizarCompra = function(){
-        alert('Sua Compra foi feita');
-    };
-
-
   });
 
   var produtosLoja = [
