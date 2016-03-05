@@ -320,7 +320,7 @@ footer{
 	padding: 0;
 
 	h2{
-		padding: 15px 20px;
+		padding: 20px;
 		background: #003859;
 		color: #FFF;
 		font-size: 18px;
@@ -330,5 +330,17 @@ footer{
 		margin-top: -16px;
 		display: block;
 		margin-bottom: 16px; 
+	}
+
+	input{
+		border-radius: 3px;
+	}
+
+	button{
+		padding: 10px 20px;
+		border-radius: 5px;
+		margin-top: 20px;
+		float: right;
+		background: #FFC200;
 	}
 }

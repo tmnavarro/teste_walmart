@@ -27,6 +27,14 @@
 
   });
 
+   app.controller('EnderecosController', function(){
+    this.enderecos = meusEnderecos;
+  });
+
+   app.controller('UsuarioController', function(){
+    this.usuario = usuarioPerfil;
+  });
+
   var produtosLoja = [
       {
         id: 1,
@@ -66,5 +74,45 @@
       },
 
     ];
+
+  var meusEnderecos = [
+      {
+        id: 1,
+        nomeEndereco: 'Endereço de cobrança',
+        rua: 'Rua Calh. Angelo Presotto',
+        numero: '225',
+        bairro: 'São José',
+        complemento: '',
+        cidade: 'Franca',
+        estado: "SP",
+        cep: '74401-289',
+        pontoReferencia: '',
+      },
+
+      {
+        id: 2,
+        nomeEndereco: 'Minha Casa',
+        rua: 'Rua Monsenhor Mario',
+        numero: '232',
+        bairro: 'Centro',
+        complemento: '',
+        cidade: 'Carmo do Rio Claro',
+        estado: "MG",
+        cep: '37150-000',
+        pontoReferencia: '',
+      },
+    ];
+
+  var usuarioPerfil = 
+      {
+        id: 1,
+        nome: "Túlio Navarro",
+        email: "tnavarrodesenvolvimento@gmail.com",
+        sexo: "Masculino",
+        cpf: '787.897.980-487',
+        dataNasc: '17/05/1992',
+        telefone: '',
+        celular: '(11) 99999-9999'
+      };
 
 })();

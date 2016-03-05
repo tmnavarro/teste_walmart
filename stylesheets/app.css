@@ -9711,7 +9711,7 @@ footer {
 }
 /* line 322, ../scss/app.scss */
 .reveal-modal h2 {
-  padding: 15px 20px;
+  padding: 20px;
   background: #003859;
   color: #FFF;
   font-size: 18px;
@@ -9721,4 +9721,16 @@ footer {
   margin-top: -16px;
   display: block;
   margin-bottom: 16px;
+}
+/* line 335, ../scss/app.scss */
+.reveal-modal input {
+  border-radius: 3px;
+}
+/* line 339, ../scss/app.scss */
+.reveal-modal button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: right;
+  background: #FFC200;
 }

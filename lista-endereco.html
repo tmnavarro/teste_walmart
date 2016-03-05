@@ -38,7 +38,7 @@
 
 	<section id="main">
 		
-		<div >
+		<div  ng-controller="EnderecosController as meusEnderecos">
 			<div class="row titulo-pagina">
 				<div class="small-6 columns">
 					<h3><i class="fa fa-map-marker"></i> Meus endereços - <small>Lista de endereços de entrega</small></h3>
@@ -46,117 +46,166 @@
 			</div>
 
 			<div class="row meus-enderecos">
-				<div class="small-12 medium-6 columns ">
+				<div class="small-12 medium-6 columns " ng-repeat="endereco in meusEnderecos.enderecos">
+
 					<div class="endereco">
-						<h5>Endereço de cobrança</h5>
+						<h5>{{ endereco.nomeEndereco }}</h5>
 
-						<p>Rua Calh. Angelo Presotto, 225 </br>	
-							<b>Bairro:</b>São José</br>	
-							<b>Cidade:</b> Franca - SP</br>	
-							<b>CEP:</b> 74401-289</br>	
-							Brasil</p>
+						<p>{{ endereco.rua }}, {{ endereco.numero }} - {{ endereco.complemento }}</br>	
+							<b>Bairro:</b>{{ endereco.bairro }}</br>	
+							<b>Cidade:</b> {{ endereco.cidade }} - {{ endereco.estado }}</br>	
+							<b>CEP:</b> {{ endereco.cep }}</br></p>
 
-							<button class="edit-endereco" data-id="1"><i class="fa fa-pencil"></i> Alterar Endereço</button>
+							<button class="edit-endereco" data-id="{{ endereco.id }}"><i class="fa fa-pencil"></i> Alterar Endereço</button>
 						</div>
 					</div>
+					<div class="modais" ng-repeat="endereco in meusEnderecos.enderecos">
+						<div id="endereco-{{ endereco.id }}" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+							<h2 id="modalTitle"><i class="fa fa-map-marker"></i> Editar endereço</h2>
+							<div class="row">
+								<div class="small-12 columns">
+									<label> Nome do endereço</label>
+									<input type="text" value="{{ endereco.nomeEndereco }}">
+									<small>Exemplo: Minha Casa, Trabalho</small>
+								</div>
 
-					<div id="endereco-1" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-						<h2 id="modalTitle"><i class="fa fa-map-marker"></i> Editar endereço</h2>
-						<div class="row">
-							<div class="small-12 columns">
-								<label> Nome do endereço</label>
-								<input type="text">
-								<small>Exemplo: Minha Casa, Trabalho</small>
+								<div class="small-6 columns">
+									<label>CEP</label>
+									<input type="text" value="{{ endereco.cep }}">
+								</div>
+
+								<div class="small-12 columns">
+									<label>Endereço</label>
+									<input type="text" value="{{ endereco.rua }}">
+								</div>
+
+								<div class="small-2 columns">
+									<label>Numero</label>
+									<input type="text" value="{{ endereco.numero }}">
+								</div>
+
+								<div class="small-5 columns">
+									<label>Complemento</label>
+									<input type="text" value="{{ endereco.complemento }}">
+								</div>
+
+								<div class="small-5 columns">
+									<label>Bairro</label>
+									<input type="text" value="{{ endereco.bairro }}">
+								</div>
+
+								<div class="small-6 columns">
+									<label>Estado</label>
+									<input type="text" value="{{ endereco.estado }}">
+								</div>
+
+								<div class="small-6 columns">
+									<label>Cidade</label>
+									<input type="text" value="{{ endereco.cidade }}">
+								</div>
+
+								<div class="small-12 columns">
+									<label>Ponto de referência</label>
+									<input type="text"  value="{{ endereco.pontoReferencia }}">
+								</div>
+
+								<div class="small-12 columns text-right">
+									<button><i class="fa fa-caret-right"></i> Salvar Alterações</button>
+								</div>
+
 							</div>
-
-							<div class="small-6 columns">
-								<label>CEP</label>
-								<input type="text">
-							</div>
-
-							<div class="small-12 columns">
-								<label>Endereço</label>
-								<input type="text">
-							</div>
-
-							<div class="small-2 columns">
-								<label>Numero</label>
-								<input type="text">
-							</div>
-
-							<div class="small-5 columns">
-								<label>Complemento</label>
-								<input type="text">
-							</div>
-
-							<div class="small-5 columns">
-								<label>Bairro</label>
-								<input type="text">
-							</div>
-
-							<div class="small-6 columns">
-								<label>Estado</label>
-								<input type="text">
-							</div>
-
-							<div class="small-6 columns">
-								<label>Cidade</label>
-								<input type="text">
-							</div>
-
-							<div class="small-12 columns">
-								<label>Ponto de referência</label>
-								<input type="text">
-							</div>
-
-							<div class="small-12 columns text-right">
-								<button> Salvar Alterações</button>
-							</div>
-
-						</div>
-						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
-					</div>
-
-					<div class="small-12 medium-6 columns ">
-						<div class="endereco">
-							<h5>Endereço de cobrança</h5>
-
-							<p>Rua Calh. Angelo Presotto, 225 </br>	
-								<b>Bairro:</b>São José</br>	
-								<b>Cidade:</b> Franca - SP</br>	
-								<b>CEP:</b> 74401-289</br>	
-								Brasil</p>
-
-								<button><i class="fa fa-pencil"></i> Alterar Endereço</button>
-							</div>
-						</div>
-						
-						<div class="small-12 columns">
-							<button> <i class="fa fa-plus-circle"></i> Adicionar novo endereço</button>
+							<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 						</div>
 					</div>
+					
+					
 
+					<div class="small-12 columns">
+						<button id="add-endereco"> <i class="fa fa-plus-circle"></i> Adicionar novo endereço</button>
+						<div id="novo-endereco" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+							<h2 id="modalTitle"><i class="fa fa-map-marker"></i> Adicionar novo endereço</h2>
+							<div class="row">
+								<div class="small-12 columns">
+									<label> Nome do endereço</label>
+									<input type="text">
+									<small>Exemplo: Minha Casa, Trabalho</small>
+								</div>
 
-				</section>
+								<div class="small-6 columns">
+									<label>CEP</label>
+									<input type="text">
+								</div>
 
-				<footer>
-					<div class="row">
-						<div class="small-12 columns text-center">
-							<small>Desenvolvido por Túlio Navarro - <i> <i class="fa fa-flask"></i> Front-End Walmart</i></small>
+								<div class="small-12 columns">
+									<label>Endereço</label>
+									<input type="text">
+								</div>
+
+								<div class="small-2 columns">
+									<label>Numero</label>
+									<input type="text">
+								</div>
+
+								<div class="small-5 columns">
+									<label>Complemento</label>
+									<input type="text">
+								</div>
+
+								<div class="small-5 columns">
+									<label>Bairro</label>
+									<input type="text">
+								</div>
+
+								<div class="small-6 columns">
+									<label>Estado</label>
+									<input type="text">
+								</div>
+
+								<div class="small-6 columns">
+									<label>Cidade</label>
+									<input type="text">
+								</div>
+
+								<div class="small-12 columns">
+									<label>Ponto de referência</label>
+									<input type="text">
+								</div>
+
+								<div class="small-12 columns text-right">
+									<button><i class="fa fa-caret-right"></i> Salvar Alterações</button>
+								</div>
+
+							</div>
+							<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 						</div>
 					</div>
-				</footer>
-				<script>
-					$(document).foundation();
+				</div>
 
-					$(document).ready(function(){
-						$(document).on('click', ".edit-endereco", function(){
-							var id = $(this).attr('data-id');
-							$('#endereco-'+id).foundation('reveal','open');
-						});
-					});
 
-				</script>	
-			</body>
+			</section>
 
-			</html>
+			<footer>
+				<div class="row">
+					<div class="small-12 columns text-center">
+						<small>Desenvolvido por Túlio Navarro - <i> <i class="fa fa-flask"></i> Front-End Walmart</i></small>
+					</div>
+				</div>
+			</footer>
+			<script>
+			$(document).foundation();
+
+			$(document).ready(function(){
+				$(document).on('click', ".edit-endereco", function(){
+					var id = $(this).attr('data-id');
+					$('#endereco-'+id).foundation('reveal','open');
+				});
+
+				$(document).on('click', '#add-endereco', function(){
+					$('#novo-endereco').foundation('reveal','open');
+				});
+			});
+
+			</script>	
+		</body>
+
+		</html>

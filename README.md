@@ -1,6 +1,6 @@
 # Teste Front-End Walmart
 
-Criação de três páginas, sendo elas: Listagem de produtos selecionados, Endereços de entrega e.
+Criação de três páginas, sendo elas: Listagem de produtos selecionados, Endereços de entrega e
 perfil do usuário.
 
 ## Tecnologias utilizadas

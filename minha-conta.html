@@ -37,7 +37,7 @@
 
 	<section id="main">
 		
-		<div ng-controller="">
+		<div ng-controller="UsuarioController as usuarioPerfil">
 			<div class="row titulo-pagina">
 				<div class="small-6 columns">
 					<h3><i class="fa fa-user"></i> Minha conta - <small>Altere seus dados</small></h3>
@@ -52,50 +52,47 @@
 
 					<div class="small-12 medium-6 columns">
 						<label for="nome">Nome</label>
-						<input type="text">
+						<input type="text" value="{{ usuarioPerfil.usuario.nome }}">
 					</div>
 
 					<div class="small-12 medium-6 columns">
 						<label for="nome">Email</label>
-						<input type="text">
+						<input type="text" value="{{ usuarioPerfil.usuario.email }}">
 					</div>
 
 					<div class="small-12 medium-4 columns">
 						<label for="nome">Sexo</label>
-						<input type="radio" value="Masculino" name="sexo" id="masculino"><label for="masculino">Masculino</label>
-      					<input type="radio" value="Feminino" name="sexo" id="feminino"><label for="feminino">Feminino</label>
+						<input type="radio" value="Masculino" name="sexo" id="masculino" checked>
+						<label for="masculino">Masculino</label>
+
+      					<input type="radio" value="Feminino" name="sexo" id="feminino">
+      					<label for="feminino">Feminino</label>
 					</div>
 
 					<div class="small-12 medium-4 columns">
 						<label for="nome">CPF</label>
-						<input type="text">
+						<input type="text" value="{{ usuarioPerfil.usuario.cpf }}">
 					</div>
 
 					<div class="small-12 medium-4 columns">
 						<label for="nome">Data de Nasc.</label>
-						<input type="text">
+						<input type="text" value="{{ usuarioPerfil.usuario.dataNasc }}">
 					</div>
 
 					<div class="small-12 medium-4 columns">
 						<label for="nome">Telefone</label>
-						<input type="text">
+						<input type="text" value="{{ usuarioPerfil.usuario.telefone }}">
 					</div>
 
 
 					<div class="small-12 medium-4 columns">
 						<label for="nome">Celular</label>
-						<input type="text">
+						<input type="text" value="{{ usuarioPerfil.usuario.celular }}">
 					</div>
 
 					<div class="small-12 medium-4 columns ">
 						<button>Salvar alterações</button>
 					</div>
-					
-					
-					
-
-
-					
 
 				</div>
 			</div>
